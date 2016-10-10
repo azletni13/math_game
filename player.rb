@@ -5,4 +5,8 @@ class Player
     @name = name
     @lives = 3
   end
+
+  def incorrect
+    @lives -= 1
+  end
 end
