@@ -1,12 +1,16 @@
-class Player
-  attr_accessor :lives, :name
+module TwoPlayerGame
+  class Player
+    DEFAULT_LIVES = 3
+    attr_accessor :lives, :name
 
-  def initialize(name)
-    @name = name
-    @lives = 3
-  end
+    def initialize(name)
+      @name = name
+      @lives = DEFAULT_LIVES
+    end
 
-  def incorrect
-    @lives -= 1
+    def decrease_life
+      @lives -= 1
+    end
+
   end
 end
